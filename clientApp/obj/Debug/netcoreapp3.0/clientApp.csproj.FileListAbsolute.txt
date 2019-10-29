@@ -1,0 +1,14 @@
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\bin\Debug\netcoreapp3.0\clientApp.exe
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\obj\Debug\netcoreapp3.0\clientApp.AssemblyInfoInputs.cache
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\obj\Debug\netcoreapp3.0\clientApp.AssemblyInfo.cs
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\bin\Debug\netcoreapp3.0\System.Net.Http.Extensions.dll
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\bin\Debug\netcoreapp3.0\System.Net.Http.Primitives.dll
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\obj\Debug\netcoreapp3.0\clientApp.csprojAssemblyReference.cache
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\obj\Debug\netcoreapp3.0\clientApp.csproj.CopyComplete
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\bin\Debug\netcoreapp3.0\clientApp.deps.json
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\bin\Debug\netcoreapp3.0\clientApp.runtimeconfig.json
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\bin\Debug\netcoreapp3.0\clientApp.runtimeconfig.dev.json
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\bin\Debug\netcoreapp3.0\clientApp.dll
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\bin\Debug\netcoreapp3.0\clientApp.pdb
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\obj\Debug\netcoreapp3.0\clientApp.dll
+C:\cases\repros\certAuthCollab\clientApp\clientApp\clientApp\obj\Debug\netcoreapp3.0\clientApp.pdb
