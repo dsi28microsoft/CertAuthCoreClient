@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Net.Http;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
@@ -15,24 +16,34 @@ namespace clientApp
 
         public static async Task go()
         {
-            X509Store store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
-            store.Open(OpenFlags.ReadOnly);
-            X509Certificate2 cert = new X509Certificate2();
-            foreach (X509Certificate2 certificate in store.Certificates)
-            {
-                Console.WriteLine(certificate.Thumbprint);
-                if (certificate.Thumbprint.ToLower() == "2f181017b83520044370bac773fd07d97f92eea9")
-                {
-                    Console.WriteLine("Found");
-                    Console.WriteLine(certificate.Thumbprint);
-                    cert = new X509Certificate2(certificate);
 
-                }
-            }
-            Console.WriteLine("Out");
+            //// find cert in store
+            //X509Store store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
+            //store.Open(OpenFlags.ReadOnly);
+            //X509Certificate2 cert = new X509Certificate2();
+            //foreach (X509Certificate2 certificate in store.Certificates)
+            //{
+            //    Console.WriteLine(certificate.Thumbprint);
 
+            //    if (certificate.Thumbprint.ToLower() == "f7a3de6bae2558ee82e0a1496b9abc8ae9a4c683")
+            //    {
+            //        Console.WriteLine("Found");
+            //        Console.WriteLine(certificate.Thumbprint);
+            //        cert = new X509Certificate2(certificate);
+
+            //    }
+            //}
+            //Console.WriteLine("Out");
+            //_clientHandler.ClientCertificates.Add(cert);
+
+
+
+            // Find cert and access with password
+            string certPath = "C:\\temp\\cert.pfx";
+            string certPass = "Welcome1";
+            var cert2 = new X509Certificate2(Path.Combine(certPath), certPass);
             var _clientHandler = new HttpClientHandler();
-            _clientHandler.ClientCertificates.Add(cert);
+            _clientHandler.ClientCertificates.Add(cert2);
             _clientHandler.ClientCertificateOptions = ClientCertificateOption.Manual;
 
             using (var _client = new HttpClient(_clientHandler))
@@ -49,10 +60,7 @@ namespace clientApp
                 {
                     Console.WriteLine(ex);
                 }
-
             }
-         
-
         }
     }
 }
