@@ -17,27 +17,6 @@ namespace clientApp
         public static async Task go()
         {
 
-            //// find cert in store
-            //X509Store store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
-            //store.Open(OpenFlags.ReadOnly);
-            //X509Certificate2 cert = new X509Certificate2();
-            //foreach (X509Certificate2 certificate in store.Certificates)
-            //{
-            //    Console.WriteLine(certificate.Thumbprint);
-
-            //    if (certificate.Thumbprint.ToLower() == "f7a3de6bae2558ee82e0a1496b9abc8ae9a4c683")
-            //    {
-            //        Console.WriteLine("Found");
-            //        Console.WriteLine(certificate.Thumbprint);
-            //        cert = new X509Certificate2(certificate);
-
-            //    }
-            //}
-            //Console.WriteLine("Out");
-            //_clientHandler.ClientCertificates.Add(cert);
-
-
-
             // Find cert and access with password
             string certPath = "C:\\temp\\cert.pfx";
             string certPass = "Welcome1";
@@ -51,6 +30,7 @@ namespace clientApp
                 try
                 {
                     HttpResponseMessage response = await _client.GetAsync("https://v-daizqucertauth.azurewebsites.net/api/TodoItems");
+                   //HttpResponseMessage response = await _client.GetAsync("https://localhost:44373/api");
                     response.EnsureSuccessStatusCode();
                     Console.WriteLine(response.Content);
                     string jsonString = response.Content.ReadAsStringAsync().Result;
